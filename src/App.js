@@ -46,13 +46,17 @@ function App() {
 
         { cargando ? <Spinner /> : null }
 
-        <Resumen 
-          datos={datos}
-        />
-        { cargando ? 
-            <Resultado 
-              cotizacion={cotizacion}
-            />
+        { !cargando ? 
+          <Resumen 
+            datos={datos}
+          />
+          : null 
+        }
+
+        { !cargando ? 
+          <Resultado 
+            cotizacion={cotizacion}
+          />
           : null 
         }
         
