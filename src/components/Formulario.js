@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { obtenerDiferenciaYear, calcularMarca } from '../helper';
+import { obtenerDiferenciaYear, calcularMarca, obtenerPlan } from '../helper';
 
 const Campo = styled.div`
     display: flex;
@@ -98,6 +98,10 @@ const Formulario = () => {
 
         // Basíco aumenta 20%
         // Completo 50%
+        const incrementoPlan = obtenerPlan(plan);
+        resultado = parseFloat( incrementoPlan * resultado ).toFixed(2);
+
+        console.log(resultado);
 
 
         // Total
@@ -110,7 +114,7 @@ const Formulario = () => {
             { error ? <Error>All fields are required</Error>  : null }
 
             <Campo>
-                <Label>Marca</Label>
+                <Label>Brand</Label>
                 <Select
                     name="marca"
                     value={marca}
@@ -124,7 +128,7 @@ const Formulario = () => {
             </Campo>
 
             <Campo>
-                <Label>Año</Label>
+                <Label>Year</Label>
                 <Select
                     name="year"
                     value={year}
