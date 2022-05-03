@@ -123,7 +123,7 @@ const Formulario = ({guardarResumen}) => {
                     value={marca}
                     onChange={obtenerInformacion}
                 >
-                    <option value="">-- Seleccione --</option>
+                    <option value="">-- Select --</option>
                     <option value="americano">Americano</option>
                     <option value="europeo">Europeo</option>
                     <option value="asiatico">Asiatico</option>
@@ -137,7 +137,7 @@ const Formulario = ({guardarResumen}) => {
                     value={year}
                     onChange={obtenerInformacion}
                 >
-                    <option value="">-- Seleccione --</option>
+                    <option value="">-- Select --</option>
                     <option value="2023">2023</option>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
